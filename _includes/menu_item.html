@@ -1,0 +1,10 @@
+
+<li {% if include.path == page.path %}class=active {% endif %} >
+<a href="{{include.path}}">
+	
+	{%if include.img %}
+	<img src="img/{{include.img}}" style="vertical-align: middle;padding-right: 4px">
+	{%endif%}
+
+	{{include.name}}</a>
+</li>

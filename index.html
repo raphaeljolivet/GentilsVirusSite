@@ -1,75 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Les Gentils Virus pour la Démocratie</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Quentin Grimaud">
+---
+layout: default
+title: Les Gentils Virus pour la Démocratie
+---
 
-    <link rel="icon" type="image/png" href="img/gentilsvirus_favicon.png">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+{%include fb_init.html %}
 
-    <link href="http://github.com/swergas/GentilsVirusSite/commits/master.atom" rel="alternate" title="Modifications récentes du site (flux Atom)" type="application/atom+xml" />
-  </head>
-
-  <body>
-  
-  <div id="fb-root"></div>
-  
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1590198547931644&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-    <div class="container">
-
-      <div class="masthead">
-		<div style="text-align: center; margin-bottom: 10px;">
-			<a href="index.html">
-				<img src="img/logo.png" style="width: 30%; min-width: 150px; max-width: 250px;" alt="Logo Gentils Virus pour la démocratie" title="Les Gentils Virus pour la démocratie"/>
-			</a>
-		</div>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav pull-middle" role="navigation">
-                <li class="active">
-					<a href="index.html">Accueil</a>
-				</li>
-                <li>
-					<a href="le_constat.html">Le constat</a>
-				</li>
-                <li>
-					<a href="les_solutions.html">Les solutions</a>
-				</li>
-                <li>
-					<a href="participez.html">Participez !</a>
-				</li>
-				<li>
-					<a href="actualites.html"><img src="img/Calendar.png" style="vertical-align: middle;padding-right: 4px">Agenda</a>
-				</li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- /.navbar -->
-    
-      </div>
-      
-      
-      
-      <div class="row-fluid show-grid">
-        <div class="span8 niceblock">
-			<h1>Accueil</h1>
+<h1>Accueil</h1>
 
 <p>
 Bienvenue sur le site vitrine des Gentils Virus !
@@ -120,22 +56,46 @@ Nous essayons donc de donner aux gens le virus de la démocratie, d'où le nom "
         </div>
         
         
-        
+	<style>
+	 .embedded-video {
+		 display:none;
+	 }
+	 .embedded-video.active{
+		 display:block;
+	 }
+	</style>
+	<script>
+  		$(document).ready(function(){
+    			$("#video-select").change(function(){
+				$(".embedded-video").removeClass("active")
+				var vidId = "#vid-" + $(this).val()
+        			$(vidId).addClass("active");
+    			});
+		});
+	</script>
         <div class="span4 niceblock">
 			<h2 class="block-title">Explications en vidéo</h2>
 
 			<form action="#" class="quick_explanation_video_form">
 
-				J'ai &nbsp;
-				<select class="quick_explanation_video_time_value" style="width: 100px; margin-bottom: 0;">
-					<option value="http://player.vimeo.com/video/52009258?title=0&amp;portrait=0&amp;badge=0&amp;color=ff9933">1 minute</option>
-					<option value="http://www.youtube.com/embed/_XoBYJXbmZE">14 minutes</option>
-					<option value="http://www.youtube.com/embed/oN5tdMSXWV8?feature=player_embedded">18 minutes</option>
-					<option value="http://www.dailymotion.com/embed/video/xwq9dj">37 minutes</option>
-					<option value="http://www.dailymotion.com/embed/video/xiyzhh">1 h 25 min</option>
-					<option value="http://www.youtube.com/embed/TLjq25_ayWM?feature=player_detailpage">2 h 30 min</option>
+				<select id="video-select" style="width: 250px; margin-bottom: 0;">
+					<option value="1min" default >1 minute</option>
+					<option value="4min" default >4 minutes</option>
+					<option value="14min">14 minutes</option>
+					<option value="18min">18 minutes</option>
+					<option value="37min">37 minutes</option>
+					<option value="1h25">1 h 25 min</option>
+					<option value="2h30">2 h 30 min</option>
 				</select>
-				<input type="submit" class="btn btn-success" value="C'est parti !" />
+				<iframe class="embedded-video active" id="vid-1min"src="https://player.vimeo.com/video/52009258" width="250" height="169" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				
+				<iframe class="embedded-video" id="vid-4min" width="250" height="170" src="https://www.youtube.com/embed/K-SbjKq3UgE?rel=0&start=100" frameborder="0" allowfullscreen></iframe>
+				<iframe class="embedded-video" id="vid-14min" width="250" height="170" src="https://www.youtube.com/embed/_XoBYJXbmZE?rel=0" frameborder="0" allowfullscreen></iframe>
+				<iframe class="embedded-video" id="vid-18min" width="250" height="170" src="https://www.youtube.com/embed/oN5tdMSXWV8?rel=0" frameborder="0" allowfullscreen></iframe>
+                                <iframe class="embedded-video" id="vid-37min" frameborder="0" width="250" height="170" src="//www.dailymotion.com/embed/video/xwq9dj" allowfullscreen></iframe>
+                                <iframe class="embedded-video" id="vid-1h25" frameborder="0" width="250" height="170" src="//www.dailymotion.com/embed/video/xiyzhh" allowfullscreen></iframe>
+				<iframe class="embedded-video" id="vid-2h30" width="250" height="170" src="https://www.youtube.com/embed/TLjq25_ayWM?rel=0" frameborder="0" allowfullscreen></iframe>
+				
 			</form>
        </div>
   
@@ -150,9 +110,9 @@ Nous essayons donc de donner aux gens le virus de la démocratie, d'où le nom "
             <h2 class="block-title">Publications Facebook</h2>
             <div class="fb-like-box" data-href="https://www.facebook.com/pages/Le-Messageorg/183950378356724" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
         </div>
-  
         
         <div class="span4 niceblock">
+            
             <h2 class="block-title">Abonnez-vous à la newsletter</h2>
             
             <!-- Begin MailChimp Signup Form -->
@@ -163,15 +123,15 @@ Nous essayons donc de donner aux gens le virus de la démocratie, d'où le nom "
                 <label for="mce-EMAIL"></label>
                 <input type="email" value="" name="EMAIL" class="required email" style="width: 90%;" id="mce-EMAIL" placeholder="votre_adresse@email.com">
             </div>
-                <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
                 <div style="position: absolute; left: -5000px;"><input type="text" name="b_6e50b5ef3f07d6baf9d24a654_6216750698" tabindex="-1" value=""></div>
                 <div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"></div>
             </form>
             </div>
-
             <!--End mc_embed_signup-->
 
             <p>Nous envoyons environ une lettre par mois.</p>
@@ -181,49 +141,3 @@ Nous essayons donc de donner aux gens le virus de la démocratie, d'où le nom "
 		
       </div>
 
-      <div class="footer">
-        &copy; Les Gentils Virus
-		- 
-        Les textes des pages de ce site sont mis à disposition sous la <a href="http://creativecommons.org/licenses/by/3.0/fr/" target="_blank">Licence Creative Commons Attribution 3.0 France</a>.
-      </div>
-
-      <div class="bottom_menu">
-      	<a href="a_propos.html">&Agrave; propos</a>
-      	-
-        <a href="contact.php">Contact</a>
-        -
-      	<a href="http://github.com/swergas/GentilsVirusSite/commits/master.atom" title="Modifications récentes du site (flux Atom)"><img src="img/Rss-feed.svg.png" /></a>
-      </div>
-
-    </div> <!-- /container -->
-    
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-
-    <!-- Piwik -->
-	<script type="text/javascript"> 
-	  var _paq = _paq || [];
-	  _paq.push(['trackPageView']);
-	  _paq.push(['enableLinkTracking']);
-	  (function() {
-	    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.gentilsvirus.fr//";
-	    _paq.push(['setTrackerUrl', u+'piwik.php']);
-	    _paq.push(['setSiteId', 1]);
-	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-	    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-	  })();
-
-	</script>
-	<noscript><p><img src="http://piwik.gentilsvirus.fr/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-	<!-- End Piwik Code -->
-
-
-  </body>
-</html>
