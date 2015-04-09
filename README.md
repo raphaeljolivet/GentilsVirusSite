@@ -14,7 +14,7 @@ Tout le monde peut contribuer au site des GV. Pour ce faire, il vous suffit de f
 
 Pour récupérer ce clone en local, vous pouvez utiliser soit un client Git natif (comme [Git Bash](http://git-scm.com/downloads) pour windows), ou bien le [client GitHub](https://windows.github.com/)
 
-`git clone https://github.com/raphaeljolivet/GentilsVirusSite.git -b gh-pages
+`git clone https://github.com/raphaeljolivet/GentilsVirusSite.git -b gh-pages`
 
 ## Prévisualiser vos changements sur github.io
 
@@ -51,7 +51,6 @@ Dans une console (celle utilisée précédemment pour Windows), rendez vous dans
 à la deuxième commande, Jekyll lance un serveur web à cette adresse : `http//localhost:4000/`. Les modifications faites aux fichiers seront automatiquement réflétées sur ce site (après chaque refresh / F5).
 
 ## Soumettre vos changements
-
 
 ### Pull request
 Commencez par faire une [Pull Request](https://help.github.com/articles/using-pull-requests/) (=demande d'intégration) depuis la branche **gh-pages** de votre dépôt local, vers la branche **master** du dépôt des GVs.
