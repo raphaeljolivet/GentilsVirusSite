@@ -8,19 +8,17 @@ Jekyll est supporté nativement par GitHub, qui déploie et héberge le site pou
 
 # Contribuer
 
-## Cloner le dépôt
+## Cloner le site 
 
-Tout le monde peut contribuer au site des GV. Pour ce faire, il vous suffit de faire un clone de ce dépôt sur votre compte personnel GitHub.
-
-## Cloner le site
+Tout le monde peut contribuer au site des GV. Pour ce faire, il vous suffit de faire un clone de la branche **gh-pages** de ce dépôt sur votre compte personnel GitHub.
 
 Pour récupérer ce clone en local, vous pouvez utiliser soit un client Git natif (comme [Git Bash](http://git-scm.com/downloads) pour windows), ou bien le [client GitHub](https://windows.github.com/)
 
+`git clone https://github.com/raphaeljolivet/GentilsVirusSite.git -b gh-pages
+
 ## Prévisualiser vos changements sur github.io
 
-Créez une branche **gh-pages** sur votre dépot personnel de **GentilsVirusSite** : GitHub déployera alors pour vous une version du site sur  `http://<votre-nom-d-utilisateur>.github.io/GentilsVirusSite/`
-
-Cette étape est nécessaire pour ensuite partager vos changements avec la communauté des GVs et obtenir leur apporbation.
+GitHub déploie automatiquement  le contenu de la branche **gh-pages** sur `http://<votre-nom-d-utilisateur>.github.io/GentilsVirusSite/`
 
 ## Prévisualiser le site localement
 
