@@ -18,7 +18,7 @@ Pour récupérer ce clone en local, vous pouvez utiliser soit un client Git nati
 
 ## Prévisualiser vos changements sur github.io
 
-GitHub déploie automatiquement  le contenu de la branche **gh-pages** sur `http://<votre-nom-d-utilisateur>.github.io/GentilsVirusSite/`
+GitHub déploie automatiquement  le contenu de la branche **gh-pages** sur `http://<votre_login>.github.io/GentilsVirusSite/`
 
 ## Prévisualiser le site localement
 
